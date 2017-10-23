@@ -1,5 +1,6 @@
 # Getting and Cleaning Data Course Project
 # By MG, 10/20/2017
+# library used "dplyr"
 
 
 # Project information 
