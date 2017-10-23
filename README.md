@@ -29,7 +29,8 @@ From the data set in step 4, creates a second, independent tidy data set with th
 6. Merge Test data into one table
 7. Merge Test and training data rows in to one table
 8. Extract mean and standard devation coloumns by filtering on coloumn names
-9. Join the result table with activity table by activiy Id and add one field "Activity Type" to the resulting table
-10. Remove activity ID since it is being replaced by Acitvity type
-11. To make the Coloumn names desciptive remove the parenteses and update the abbrivated names
-12. Apply mean function coloumn-wise after grouping by subject and activity type
+9. Load library dplyr
+10. Join the result table with activity table by activiy Id and add one field "Activity Type" to the resulting table
+11. Remove activity ID since it is being replaced by Acitvity type
+12. To make the Coloumn names desciptive remove the parenteses and update the abbrivated names
+13. Apply mean function coloumn-wise after grouping by subject and activity type
