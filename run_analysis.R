@@ -1,6 +1,6 @@
 # Getting and Cleaning Data Course Project
 # By MG, 10/20/2017
-# library used "dplyr"
+# library used "dplyr" and "plyr"
 
 
 # Project information 
@@ -93,4 +93,6 @@ names(meanAndStd) <- gsub("Freq", "Frequency", names(meanAndStd))
 names(meanAndStd) <- gsub("Mag", "Magnitude", names(meanAndStd))
 
 ## 5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+library(plyr)
 tidyAverage<- ddply(meanAndStd, c("subject","activityType"), numcolwise(mean))
+write.table(tidyAverage, file = "tidydata.txt",row.name=FALSE)
