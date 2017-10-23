@@ -68,7 +68,9 @@ activityLabel <- read.table("./activity_labels.txt")
 colnames(activityLabel)<-c("activityId","activityType")
 
 #join the two table by activity ID
-meanAndStd <- join(meanAndStd, activityLabel, by = "activityId")
+#load dplyr to use inner join
+library(dplyr)
+meanAndStd <- inner_join(meanAndStd, activityLabel, by = "activityId")
 
 #remove activity id, since we have activity type
 meanAndStd <-meanAndStd[,-1]
